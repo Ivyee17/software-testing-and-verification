@@ -1,17 +1,18 @@
 package com.test.unit;
 
 public class CityClock extends Clock {
-    private int utcZeroTime;
-    @Override
-    public int getTime() {
-        return (utcZeroTime+utcOffset+24)%24;
-    }
+  private int utcZeroTime;
 
-    public void setUtcZeroTime(int utcZeroTime) {
-        this.utcZeroTime = utcZeroTime;
-    }
+  @Override
+  public int getTime() {
+      return (utcZeroTime+utcOffset+24)%24;
+  }
 
-    public CityClock(int utcOffset){
-        this.utcOffset=utcOffset;
-    }
+  public void setUtcZeroTime(int utcZeroTime) {
+      this.utcZeroTime = utcZeroTime;
+  }
+
+  public CityClock(int utcOffset){
+      this.utcOffset=utcOffset;
+  }
 }
